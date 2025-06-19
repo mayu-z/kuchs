@@ -1,0 +1,159 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            height: 700vh;
+            position: relative;
+            /* Removed overflow-y: scroll and scrollbar hiding properties */
+        }
+
+        .screen {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw;
+            max-width: 1200px;
+            height: 80vh;
+            border: 2px solid #444;
+            border-radius: 20px;
+            padding: 40px;
+            background: #1a1a1a;
+        }
+
+        .screen-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #fff;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: calc(100% - 120px);
+            gap: 60px;
+        }
+
+        .cards-container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            flex-shrink: 0;
+        }
+
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            transform-origin: center center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .card-0 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 6;
+        }
+
+        .card-1 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            z-index: 5;
+            transform: rotate(-8deg);
+        }
+
+        .card-2 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            z-index: 4;
+            transform: rotate(12deg);
+        }
+
+        .card-3 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            z-index: 3;
+            transform: rotate(-15deg);
+        }
+
+        .card-4 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            z-index: 2;
+            transform: rotate(18deg);
+        }
+
+        .card-5 {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            z-index: 1;
+            transform: rotate(-20deg);
+        }
+
+        .titles-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding-left: 40px;
+        }
+        
+        .title {
+            color: #888;
+            font-weight: 300;
+            cursor: default;
+            font-size: 1.5rem;
+        }
+
+        .progress-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 4px;
+            height: 200px;
+            background: #333;
+            border-radius: 2px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+            height: 0%;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .cards-container {
+                width: 250px;
+                height: 320px;
+            }
+            
+            .titles-container {
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+        .jao{
+            height: 100vh;;
+        }
